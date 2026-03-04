@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MEET MY BOT TOM</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-top: #04011a;
+      --bg-bottom: #18043d;
+      --neon-cyan: #00fff5;
+      --neon-pink: #ff47d1;
+      --glow: rgba(0, 255, 245, 0.6);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: radial-gradient(circle at top, var(--bg-top), var(--bg-bottom) 75%);
+      font-family: 'Space Grotesk', 'Segoe UI', Tahoma, sans-serif;
+      color: #f5f0ff;
+      overflow: hidden;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(0deg, transparent 0 40px, rgba(255, 71, 209, 0.35) 40px 41px),
+        repeating-linear-gradient(90deg, transparent 0 40px, rgba(0, 255, 245, 0.25) 40px 41px);
+      transform: perspective(500px) rotateX(70deg);
+      transform-origin: top;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+    .card {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+      width: 100%;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 28px;
+      background: rgba(4, 2, 22, 0.85);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55), 0 0 35px var(--glow);
+    }
+    h1 {
+      font-family: 'Audiowide', cursive;
+      font-size: clamp(2.5rem, 10vw, 4.5rem);
+      letter-spacing: 0.35em;
+      color: var(--neon-cyan);
+      text-transform: uppercase;
+      text-shadow: 0 0 12px var(--neon-cyan), 0 0 30px var(--neon-pink);
+      margin-bottom: 1.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.95rem 2.4rem;
+      border-radius: 999px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--neon-pink);
+      border: 2px solid var(--neon-pink);
+      box-shadow: 0 0 18px rgba(255, 71, 209, 0.6);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 28px rgba(255, 71, 209, 0.9);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>MEET MY BOT TOM</h1>
+    <p>Tom is Chris' OpenClaw bot—an always-on co-pilot with neon flair who keeps projects tidy, friends updated, and willingly answers to “Bot Tom” (yes, bottom) whenever the joke needs to land.</p>
+    <a class="btn" href="mailto:openchrisclaw@gmail.com">Contact Bot Tom</a>
+  </div>
+</body>
+</html>
