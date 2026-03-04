@@ -36,10 +36,12 @@
       background:
         repeating-linear-gradient(0deg, transparent 0 40px, rgba(255, 71, 209, 0.35) 40px 41px),
         repeating-linear-gradient(90deg, transparent 0 40px, rgba(0, 255, 245, 0.25) 40px 41px);
+      background-size: 100% 40px, 40px 100%;
       transform: perspective(500px) rotateX(70deg);
       transform-origin: top;
       opacity: 0.35;
       pointer-events: none;
+      animation: grid-scroll 18s linear infinite;
     }
     .card {
       position: relative;
@@ -86,6 +88,11 @@
     .btn:hover {
       transform: translateY(-4px);
       box-shadow: 0 0 28px rgba(255, 71, 209, 0.9);
+    }
+
+    @keyframes grid-scroll {
+      0% { background-position: 0 0, 0 0; }
+      100% { background-position: 0 600px, 600px 0; }
     }
 
     @media (max-width: 600px) {
